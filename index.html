@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="public/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Bangalore's next-generation digital signage network. Connect, monitor, and grow your billboard revenue on one intelligent platform." />
+    <title>SignaLink — The Future of Digital Billboards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+</head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+      <div class="loader-ring"></div>
+      <div class="loader-text">SignaLink</div>
+    </div>
+
+    <!-- Mouse Glow -->
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+    <!-- Aurora Background -->
+    <div class="aurora" aria-hidden="true">
+      <div class="aurora-blob aurora-blob--1"></div>
+      <div class="aurora-blob aurora-blob--2"></div>
+      <div class="aurora-blob aurora-blob--3"></div>
+    </div>
+
+    <!-- Particle Canvas -->
+    <canvas class="particles" id="particles" aria-hidden="true"></canvas>
+
+    <!-- Navigation -->
+    <header class="nav" id="nav">
+      <div class="nav__inner">
+        <a href="#hero" class="nav__brand" aria-label="SignaLink home">
+          <span class="nav__logo">
+            <i class="fa-solid fa-tower-broadcast"></i>
+          </span>
+          <span class="nav__name">SignaLink</span>
+        </a>
+        <nav class="nav__links" id="navLinks">
+          <a href="#about" class="nav__link">About</a>
+          <a href="#why" class="nav__link">Why Us</a>
+          <a href="#how" class="nav__link">How It Works</a>
+          <a href="#services" class="nav__link">Services</a>
+          <a href="#marketplace" class="nav__link">Marketplace</a>
+          <a href="#vision" class="nav__link">Vision</a>
+          <a href="#faq" class="nav__link">FAQ</a>
+          <a href="#contact" class="nav__link">Contact</a>
+          <a href="#enroll" class="nav__cta">Enroll Billboard</a>
+        </nav>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero" id="hero">
+        <div class="hero__video-wrap">
+          <video class="hero__video" autoplay muted loop playsinline poster="https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&w=1920">
+            <source src="https://cdn.pixabay.com/video/2022/12/05/141870-776316438_large.mp4" type="video/mp4" />
+          </video>
+          <div class="hero__overlay"></div>
+        </div>
+        <div class="hero__content">
+          <p class="hero__eyebrow reveal" data-delay="0">Digital Signage Platform for Billboard Owners</p>
+          <h1 class="hero__title reveal" data-delay="150">
+            The Future of <span class="grad-text">Digital Billboards</span> Starts Here
+          </h1>
+          <p class="hero__sub reveal" data-delay="300">Connect. Monitor. Grow.</p>
+          <p class="hero__desc reveal" data-delay="450">
+            Every digital billboard has the potential to earn more, perform better, and reach the right audience.
+            We're building Bangalore's next-generation digital signage network — bringing billboard owners,
+            advertisers, and technology together on one intelligent platform.
+          </p>
+          <div class="hero__actions reveal" data-delay="600">
+            <a href="#enroll" class="btn btn--primary ripple"><i class="fa-solid fa-arrow-right-to-bracket"></i> Enroll Your Billboard</a>
+            <a href="#how" class="btn btn--ghost ripple"><i class="fa-solid fa-play"></i> Schedule a Demo</a>
+          </div>
+        </div>
+        <div class="hero__stats reveal" data-delay="750">
+          <div class="hero__stat">
+            <span class="hero__stat-num" data-count="120" data-suffix="+">0</span>
+            <span class="hero__stat-label">Billboards Onboarded</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-num" data-count="98" data-suffix="%">0</span>
+            <span class="hero__stat-label">Uptime Guarantee</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-num" data-count="24" data-suffix="/7">0</span>
+            <span class="hero__stat-label">Support Available</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-num" data-count="5" data-suffix="G">0</span>
+            <span class="hero__stat-label">Network Ready</span>
+          </div>
+        </div>
+        <div class="scroll-cue" aria-hidden="true">
+          <span class="scroll-cue__mouse"><span></span></span>
+          <span class="scroll-cue__text">Scroll</span>
+        </div>
+      </section>
+
+      <!-- About / Why Partner -->
+      <section class="section" id="about">
+        <div class="section__head">
+          <span class="section__tag reveal">Why Partner With Us</span>
+          <h2 class="section__title reveal" data-delay="100">Technology that works for <span class="grad-text">billboard owners</span></h2>
+          <p class="section__lead reveal" data-delay="200">
+            Digital advertising is evolving rapidly, and billboard owners deserve technology that works for them —
+            not the other way around. By partnering with us today, you're becoming part of a growing digital
+            ecosystem designed to increase visibility, improve operational efficiency, and unlock new business
+            opportunities.
+          </p>
+        </div>
+        <div class="cards cards--3">
+          <article class="glass-card reveal" data-delay="0">
+            <div class="glass-card__icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <h3>Smarter Billboard Management</h3>
+            <p>Monitor your displays from anywhere with a centralized dashboard built for operators.</p>
+          </article>
+          <article class="glass-card reveal" data-delay="120">
+            <div class="glass-card__icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+            <h3>Better Revenue Opportunities</h3>
+            <p>Prepare your inventory for future advertiser bookings and maximize every available slot.</p>
+          </article>
+          <article class="glass-card reveal" data-delay="240">
+            <div class="glass-card__icon"><i class="fa-solid fa-headset"></i></div>
+            <h3>Reliable Technical Support</h3>
+            <p>Our experienced team is available for installation assistance, troubleshooting, and maintenance.</p>
+          </article>
+          <article class="glass-card reveal" data-delay="0">
+            <div class="glass-card__icon"><i class="fa-solid fa-plug-circle-check"></i></div>
+            <h3>Seamless Integration</h3>
+            <p>Already using digital signage software? We'll integrate with your existing setup whenever possible.</p>
+          </article>
+          <article class="glass-card reveal" data-delay="120">
+            <div class="glass-card__icon"><i class="fa-solid fa-store"></i></div>
+            <h3>Future Marketplace Access</h3>
+            <p>Advertisers will discover and book your available billboard space directly — qualified customers to you.</p>
+          </article>
+          <article class="glass-card reveal" data-delay="240">
+            <div class="glass-card__icon"><i class="fa-solid fa-people-group"></i></div>
+            <h3>Community Impact</h3>
+            <p>Unused slots can support public awareness, local announcements, emergency info, or community messages.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- How It Works -->
+      <section class="section section--alt" id="how">
+        <div class="section__head">
+          <span class="section__tag reveal">How Our Platform Works</span>
+          <h2 class="section__title reveal" data-delay="100">Getting started is <span class="grad-text">simple</span></h2>
+          <p class="section__lead reveal" data-delay="200">A clear path from registration to a fully managed, revenue-ready billboard.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline__line" aria-hidden="true"></div>
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"><span>1</span></div>
+            <div class="timeline__card glass-card">
+              <h3>Register Your Billboard</h3>
+              <p>Provide your billboard location, dimensions, screen specifications, operating hours, and availability.</p>
+            </div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"><span>2</span></div>
+            <div class="timeline__card glass-card">
+              <h3>Platform Integration</h3>
+              <p>Our technical team evaluates your existing setup. If compatible, we integrate; if not, we provide a complete solution.</p>
+            </div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"><span>3</span></div>
+            <div class="timeline__card glass-card">
+              <h3>Go Live</h3>
+              <p>Your billboard becomes part of our managed network. Monitor playback, screen health, and schedules from one platform.</p>
+            </div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"><span>4</span></div>
+            <div class="timeline__card glass-card">
+              <h3>Receive Ongoing Support</h3>
+              <p>Our support team ensures your screens remain operational with remote assistance and technical guidance.</p>
+            </div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"><span>5</span></div>
+            <div class="timeline__card glass-card">
+              <h3>Prepare for Future Advertising</h3>
+              <p>As our marketplace launches, advertisers will discover and request your available slots directly — increasing occupancy and revenue.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="section" id="services">
+        <div class="section__head">
+          <span class="section__tag reveal">Our Services</span>
+          <h2 class="section__title reveal" data-delay="100">Your digital signage <span class="grad-text">technology partner</span></h2>
+          <p class="section__lead reveal" data-delay="200">We're more than a software provider — we're your long-term technology partner.</p>
+        </div>
+        <div class="cards cards--3">
+          <article class="service-card reveal" data-delay="0">
+            <div class="service-card__icon"><i class="fa-solid fa-rectangle-list"></i></div>
+            <h3>Billboard Registration</h3>
+            <p>Create a professional digital profile for every billboard you own.</p>
+          </article>
+          <article class="service-card reveal" data-delay="100">
+            <div class="service-card__icon"><i class="fa-solid fa-calendar-days"></i></div>
+            <h3>Content Scheduling</h3>
+            <p>Manage advertisements with intelligent scheduling based on dates, times, and campaign duration.</p>
+          </article>
+          <article class="service-card reveal" data-delay="200">
+            <div class="service-card__icon"><i class="fa-solid fa-tower-cell"></i></div>
+            <h3>Remote Monitoring</h3>
+            <p>Monitor online status, playback health, uptime, and display performance in real time.</p>
+          </article>
+          <article class="service-card reveal" data-delay="0">
+            <div class="service-card__icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <h3>Technical Assistance</h3>
+            <p>From installation to troubleshooting, our dedicated support team is ready to help.</p>
+          </article>
+          <article class="service-card reveal" data-delay="100">
+            <div class="service-card__icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Performance Reporting</h3>
+            <p>Track screen activity, advertising schedules, uptime, and operational insights.</p>
+          </article>
+          <article class="service-card reveal" data-delay="200">
+            <div class="service-card__icon"><i class="fa-solid fa-code-branch"></i></div>
+            <h3>Software Integration</h3>
+            <p>Already using another CMS? We'll integrate where possible to reduce migration effort.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Future Marketplace -->
+      <section class="section section--alt" id="marketplace">
+        <div class="section__head">
+          <span class="section__tag reveal">Future Advertiser Marketplace</span>
+          <h2 class="section__title reveal" data-delay="100">Where advertisers <span class="grad-text">meet inventory</span></h2>
+          <p class="section__lead reveal" data-delay="200">
+            Soon, businesses and agencies will browse, compare, and book billboard inventory directly through our
+            platform — greater visibility for your assets and more opportunities to generate consistent revenue.
+          </p>
+        </div>
+        <div class="flow reveal" data-delay="300">
+          <div class="flow__node">
+            <div class="flow__icon"><i class="fa-solid fa-bullhorn"></i></div>
+            <h4>Advertiser</h4>
+            <p>Searches locations, compares pricing, books campaigns</p>
+          </div>
+          <div class="flow__arrow"><i class="fa-solid fa-arrow-right-long"></i></div>
+          <div class="flow__node flow__node--center">
+            <div class="flow__icon flow__icon--center"><i class="fa-solid fa-tower-broadcast"></i></div>
+            <h4>SignaLink Platform</h4>
+            <p>Matches inventory, schedules playback, processes payments</p>
+          </div>
+          <div class="flow__arrow"><i class="fa-solid fa-arrow-right-long"></i></div>
+          <div class="flow__node">
+            <div class="flow__icon"><i class="fa-solid fa-tv"></i></div>
+            <h4>Billboard</h4>
+            <p>Goes live with the booked creative at the scheduled time</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vision -->
+      <section class="section vision" id="vision">
+        <div class="vision__bg" aria-hidden="true"></div>
+        <div class="vision__content">
+          <span class="section__tag reveal">Our Vision</span>
+          <h2 class="section__title reveal" data-delay="100">Building the future <span class="grad-text">digital advertising network</span></h2>
+          <p class="section__lead reveal" data-delay="200">
+            We're not just building software. We're building a platform where billboard owners, advertisers,
+            agencies, and brands connect seamlessly.
+          </p>
+          <div class="vision__grid">
+            <div class="vision__col reveal" data-delay="300">
+              <h3><i class="fa-solid fa-bullhorn"></i> Advertisers will be able to</h3>
+              <ul class="check-list">
+                <li>Search for billboard locations</li>
+                <li>Compare pricing and availability</li>
+                <li>Book campaigns online</li>
+                <li>Upload creatives</li>
+                <li>Schedule advertisements instantly</li>
+                <li>Track campaign performance</li>
+                <li>Make secure online payments</li>
+              </ul>
+            </div>
+            <div class="vision__col reveal" data-delay="450">
+              <h3><i class="fa-solid fa-tower-broadcast"></i> Billboard owners gain</h3>
+              <ul class="check-list">
+                <li>Higher occupancy rates</li>
+                <li>Simplified operations</li>
+                <li>Better revenue opportunities</li>
+                <li>Centralized management</li>
+                <li>A wider network of potential customers</li>
+              </ul>
+            </div>
+          </div>
+          <p class="vision__closing reveal" data-delay="600">Together, we're creating a smarter, more connected digital signage ecosystem.</p>
+        </div>
+      </section>
+
+      <!-- Why Join Early -->
+      <section class="section" id="why-early">
+        <div class="section__head">
+          <span class="section__tag reveal">Why Join Early?</span>
+          <h2 class="section__title reveal" data-delay="100">Early partners enjoy <span class="grad-text">long-term advantages</span></h2>
+          <p class="section__lead reveal" data-delay="200">The earlier you join, the stronger your position becomes as the platform expands.</p>
+        </div>
+        <div class="early-grid">
+          <div class="early-list reveal" data-delay="300">
+            <div class="check-item"><i class="fa-solid fa-circle-check"></i> Priority onboarding</div>
+            <div class="check-item"><i class="fa-solid fa-circle-check"></i> Dedicated technical assistance</div>
+            <div class="check-item"><i class="fa-solid fa-circle-check"></i> Early access to upcoming features</div>
+            <div class="check-item"><i class="fa-solid fa-circle-check"></i> Greater visibility in future advertiser listings</div>
+            <div class="check-item"><i class="fa-solid fa-circle-check"></i> Opportunity to influence future platform features</div>
+            <div class="check-item"><i class="fa-solid fa-circle-check"></i> Preferred support and onboarding benefits</div>
+          </div>
+          <div class="early-stats reveal" data-delay="450">
+            <div class="stat-block">
+              <span class="stat-block__num" data-count="100" data-suffix="%">0</span>
+              <span class="stat-block__label">Priority onboarding for early partners</span>
+            </div>
+            <div class="stat-block">
+              <span class="stat-block__num" data-count="6" data-suffix="">0</span>
+              <span class="stat-block__label">Exclusive early-partner benefits</span>
+            </div>
+            <div class="stat-block">
+              <span class="stat-block__num" data-count="1" data-suffix="st">0</span>
+              <span class="stat-block__label">Access to the future marketplace</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Enroll Form -->
+      <section class="section section--alt" id="enroll">
+        <div class="section__head">
+          <span class="section__tag reveal">Enroll Your Billboard</span>
+          <h2 class="section__title reveal" data-delay="100">Ready to join the <span class="grad-text">future of digital signage?</span></h2>
+          <p class="section__lead reveal" data-delay="200">Complete a simple registration and let our team handle the rest.</p>
+        </div>
+        <div class="form-wrap reveal" data-delay="300">
+          <form class="enroll-form" id="enrollForm" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <input type="text" id="company" name="company" required />
+                <label for="company">Company Name</label>
+                <span class="field__error" data-for="company"></span>
+              </div>
+              <div class="field">
+                <input type="text" id="owner" name="owner" required />
+                <label for="owner">Owner Name</label>
+                <span class="field__error" data-for="owner"></span>
+              </div>
+              <div class="field">
+                <input type="tel" id="phone" name="phone" required />
+                <label for="phone">Contact Number</label>
+                <span class="field__error" data-for="phone"></span>
+              </div>
+              <div class="field">
+                <input type="email" id="email" name="email" required />
+                <label for="email">Email Address</label>
+                <span class="field__error" data-for="email"></span>
+              </div>
+              <div class="field">
+                <input type="text" id="location" name="location" required />
+                <label for="location">Billboard Location</label>
+                <span class="field__error" data-for="location"></span>
+              </div>
+              <div class="field">
+                <input type="url" id="maps" name="maps" placeholder=" " />
+                <label for="maps">Google Maps Link</label>
+                <span class="field__error" data-for="maps"></span>
+              </div>
+              <div class="field">
+                <input type="text" id="size" name="size" required />
+                <label for="size">Screen Size</label>
+                <span class="field__error" data-for="size"></span>
+              </div>
+              <div class="field">
+                <input type="text" id="resolution" name="resolution" required />
+                <label for="resolution">Resolution</label>
+                <span class="field__error" data-for="resolution"></span>
+              </div>
+              <div class="field">
+                <select id="type" name="type" required>
+                  <option value="" disabled selected hidden></option>
+                  <option>LED Display</option>
+                  <option>LCD Display</option>
+                  <option>Projection</option>
+                  <option>Other</option>
+                </select>
+                <label for="type">Billboard Type</label>
+                <span class="field__error" data-for="type"></span>
+              </div>
+              <div class="field">
+                <input type="number" id="screens" name="screens" min="1" required />
+                <label for="screens">Number of Screens</label>
+                <span class="field__error" data-for="screens"></span>
+              </div>
+              <div class="field">
+                <input type="text" id="hours" name="hours" required />
+                <label for="hours">Operating Hours</label>
+                <span class="field__error" data-for="hours"></span>
+              </div>
+              <div class="field">
+                <input type="text" id="software" name="software" placeholder=" " />
+                <label for="software">Current Software (if any)</label>
+              </div>
+              <div class="field">
+                <select id="connectivity" name="connectivity" required>
+                  <option value="" disabled selected hidden></option>
+                  <option>Wi-Fi</option>
+                  <option>4G / 5G Cellular</option>
+                  <option>Ethernet / Fiber</option>
+                  <option>Not Available</option>
+                </select>
+                <label for="connectivity">Internet Connectivity</label>
+                <span class="field__error" data-for="connectivity"></span>
+              </div>
+              <div class="field">
+                <select id="availability" name="availability" required>
+                  <option value="" disabled selected hidden></option>
+                  <option>Fully Available</option>
+                  <option>Partially Booked</option>
+                  <option>Fully Booked</option>
+                </select>
+                <label for="availability">Availability</label>
+                <span class="field__error" data-for="availability"></span>
+              </div>
+              <div class="field">
+                <select id="plan" name="plan" required>
+                  <option value="" disabled selected hidden></option>
+                  <option>Starter</option>
+                  <option>Professional</option>
+                  <option>Enterprise</option>
+                </select>
+                <label for="plan">Preferred Service Plan</label>
+                <span class="field__error" data-for="plan"></span>
+              </div>
+              <div class="field field--full">
+                <textarea id="notes" name="notes" rows="3" placeholder=" "></textarea>
+                <label for="notes">Additional Notes</label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block ripple" id="submitBtn">
+              <span class="btn__label">Submit Registration</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <p class="form-note" id="formNote"></p>
+          </form>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section" id="faq">
+        <div class="section__head">
+          <span class="section__tag reveal">Frequently Asked Questions</span>
+          <h2 class="section__title reveal" data-delay="100">Answers to <span class="grad-text">common questions</span></h2>
+        </div>
+        <div class="faq reveal" data-delay="200">
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">
+              <span>Do I need to replace my existing system?</span>
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="faq__a"><p>Not necessarily. If your current setup supports integration, we'll connect it to our platform. Otherwise, we'll recommend the best solution based on your requirements.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">
+              <span>Can I continue selling advertisements independently?</span>
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="faq__a"><p>Absolutely. Our platform complements your existing business while creating additional opportunities in the future.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">
+              <span>Is technical support included?</span>
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="faq__a"><p>Yes. We provide onboarding assistance, remote technical support, and guidance whenever needed.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">
+              <span>When will advertisers be able to book directly?</span>
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="faq__a"><p>We're actively developing the customer-facing marketplace. Early partners will receive priority access as new features become available.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section section--alt" id="contact">
+        <div class="section__head">
+          <span class="section__tag reveal">Get in Touch</span>
+          <h2 class="section__title reveal" data-delay="100">Let's build the future of <span class="grad-text">digital advertising</span> together</h2>
+          <p class="section__lead reveal" data-delay="200">
+            Whether you manage one digital billboard or hundreds, we're here to help you modernize operations,
+            increase visibility, and prepare for the next generation of digital advertising.
+          </p>
+        </div>
+        <div class="contact-grid reveal" data-delay="300">
+          <a href="tel:+918000000000" class="contact-card">
+            <div class="contact-card__icon"><i class="fa-solid fa-phone"></i></div>
+            <span class="contact-card__label">Phone</span>
+            <span class="contact-card__value">+91 80 0000 0000</span>
+          </a>
+          <a href="mailto:hello@signalink.io" class="contact-card">
+            <div class="contact-card__icon"><i class="fa-solid fa-envelope"></i></div>
+            <span class="contact-card__label">Email</span>
+            <span class="contact-card__value">hello@signalink.io</span>
+          </a>
+          <div class="contact-card">
+            <div class="contact-card__icon"><i class="fa-solid fa-location-dot"></i></div>
+            <span class="contact-card__label">Office Address</span>
+            <span class="contact-card__value">Bengaluru, Karnataka, India</span>
+          </div>
+          <a href="#hero" class="contact-card">
+            <div class="contact-card__icon"><i class="fa-solid fa-globe"></i></div>
+            <span class="contact-card__label">Website</span>
+            <span class="contact-card__value">www.signalink.io</span>
+          </a>
+        </div>
+        <div class="map-wrap reveal" data-delay="450">
+          <iframe
+            title="Bengaluru office location"
+            src="https://www.google.com/maps?q=Bengaluru,Karnataka,India&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <!-- Floating CTA -->
+    <a href="#enroll" class="float-cta" aria-label="Enroll your billboard">
+      <i class="fa-solid fa-tower-broadcast"></i>
+      <span>Enroll</span>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#hero" class="nav__brand">
+            <span class="nav__logo"><i class="fa-solid fa-tower-broadcast"></i></span>
+            <span class="nav__name">SignaLink</span>
+          </a>
+          <p>Bangalore's next-generation digital signage network. Connect, monitor, and grow your billboard revenue on one intelligent platform.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Platform</h4>
+          <a href="#about">About</a>
+          <a href="#how">How It Works</a>
+          <a href="#services">Services</a>
+          <a href="#marketplace">Marketplace</a>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <a href="#vision">Vision</a>
+          <a href="#why-early">Why Join Early</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer__col footer__news">
+          <h4>Newsletter</h4>
+          <p>Get product updates and early-partner news.</p>
+          <form class="newsletter" id="newsletterForm" novalidate>
+            <input type="email" id="newsEmail" placeholder="Your email" aria-label="Email for newsletter" />
+            <button type="submit" class="btn btn--primary" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+          </form>
+          <p class="newsletter__msg" id="newsMsg"></p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; <span id="year"></span> SignaLink. All rights reserved.</span>
+        <span>Built in Bengaluru</span>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
